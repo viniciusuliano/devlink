@@ -1,5 +1,6 @@
+import { Header } from "../../components/header"
 export function Admin(){
     return(
-        <div>Bem vindo a Página de Admin</div>
+        <Header/>
     )
 }
