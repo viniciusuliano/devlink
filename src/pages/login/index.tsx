@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react"
 import {auth} from '../../services/firebaseConection'
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { useNavigate } from "react-router-dom"
+import { toast } from 'react-toastify';
 
 export function Login(){
 
@@ -21,14 +22,15 @@ export function Login(){
 
        signInWithEmailAndPassword(auth, user, password)
        .then(() =>{
-        navigate('/admin', {replace: true})        
+        navigate('/admin', {replace: true})    
+        toast.success("Seja bem-vindo!")    
         })
        .catch((error) => {
         if(error.code === 'auth/invalid-credential'){
-            console.log('Senha errada, digite novamente sua senha')
+            toast.error('Erro! Senha inválida');
         }
         if(error.code === 'auth/invalid-email'){
-            console.log('Email errado, digite o email correto')
+            toast.error('Erro! Email inválido');
         }
        })
     }
