@@ -16,12 +16,13 @@ export function Header(){
 
     return (
         <div className='w-full flex justify-center'>                
-            <div className="flex justify-start items-center m-9 ml-3 gap-10 bg-white h-14 w-96">
+            <div className="flex justify-around items-center bg-white w-full h-20 rounded p-3 m-5 ">
                 <button onClick={signOutLogin}>
-                    <FiLogOut className='w-10 h-8 mr-5 text-red-500 rotate-180'/>
+                    <FiLogOut className='w-10 h-8 text-red-500 rotate-180' />
                 </button>
-                <Link className='font-bold' to='/'>Home</Link>
-                <Link className='font-bold' to='/network'>Links</Link>                
+                <Link className='font-bold text-sm md:text-xl duration-150 hover:scale-125' to='/'>Home</Link>
+                <Link className='font-bold text-sm md:text-xl duration-150 hover:scale-125' to='/network'>Links</Link>      
+                <Link className='font-bold text-sm md:text-xl duration-150 hover:scale-125' to='http://instagram.com.br' target='_blank'>Redes sociais</Link>
             </div>
         </div>
     )

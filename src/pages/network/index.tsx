@@ -1,5 +1,6 @@
+import { Header } from "../../components/header"
 export function Network(){
     return(
-        <div>Bem vindo as Networks</div>
+        <Header/>
     )
 }
